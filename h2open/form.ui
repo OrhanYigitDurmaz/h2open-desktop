@@ -51,70 +51,70 @@
              <item>
               <widget class="QPushButton" name="pushButton_68">
                <property name="text">
-                <string>Satış</string>
+                <string>Sale</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_69">
                <property name="text">
-                <string>Araca Bildir</string>
+                <string>Report to Car</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_70">
                <property name="text">
-                <string>Verildi</string>
+                <string>Given</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_71">
                <property name="text">
-                <string>Düzenle</string>
+                <string>Edit</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_72">
                <property name="text">
-                <string>Sil</string>
+                <string>Delete</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_73">
                <property name="text">
-                <string>Emanet</string>
+                <string>Deposit</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_74">
                <property name="text">
-                <string>SMS Gönder</string>
+                <string>Send SMS</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_75">
                <property name="text">
-                <string>Sipariş Fişi</string>
+                <string>Sale Re</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_76">
                <property name="text">
-                <string>Satış Raporu</string>
+                <string>Sale Report</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_77">
                <property name="text">
-                <string>Yazdır</string>
+                <string>Print</string>
                </property>
               </widget>
              </item>
@@ -141,42 +141,42 @@
              <item row="0" column="0">
               <widget class="QLabel" name="label_2">
                <property name="text">
-                <string>Tarih:</string>
+                <string>Date:</string>
                </property>
               </widget>
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="label_3">
                <property name="text">
-                <string>Müşteri Bilgileri:</string>
+                <string>Customer Details:</string>
                </property>
               </widget>
              </item>
              <item row="0" column="2">
               <widget class="QLabel" name="label_4">
                <property name="text">
-                <string>Ürün:</string>
+                <string>Product:</string>
                </property>
               </widget>
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="label_5">
                <property name="text">
-                <string>Ödeme Yeri:</string>
+                <string>Payment Location :</string>
                </property>
               </widget>
              </item>
              <item row="0" column="4">
               <widget class="QLabel" name="label_6">
                <property name="text">
-                <string>Sipariş Durumu:</string>
+                <string> Order Status:</string>
                </property>
               </widget>
              </item>
              <item row="0" column="5">
               <widget class="QLabel" name="label_7">
                <property name="text">
-                <string>Ödeme Şekli:</string>
+                <string>Payment Method:</string>
                </property>
               </widget>
              </item>
@@ -190,7 +190,7 @@
              <item row="0" column="7">
               <widget class="QLabel" name="label_9">
                <property name="text">
-                <string>Fiş No:</string>
+                <string>Receipt No:</string>
                </property>
               </widget>
              </item>
@@ -228,7 +228,7 @@
              <item row="1" column="8">
               <widget class="QPushButton" name="pushButton">
                <property name="text">
-                <string>Sıfırla</string>
+                <string>Reset</string>
                </property>
               </widget>
              </item>
@@ -324,7 +324,7 @@
      <item>
       <widget class="QPushButton" name="pushButton_aboneler_2">
        <property name="text">
-        <string>Aboneler</string>
+        <string>Customers</string>
        </property>
       </widget>
      </item>
@@ -337,28 +337,28 @@
         </font>
        </property>
        <property name="text">
-        <string>Arama &amp;&amp; Satış</string>
+        <string>Search &amp;&amp; Sales</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_9">
        <property name="text">
-        <string>Ürün &amp;&amp; Stok</string>
+        <string>Products &amp;&amp; Stock</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_13">
        <property name="text">
-        <string>Kasa</string>
+        <string>Register</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_11">
        <property name="text">
-        <string>Hatırlatmalar</string>
+        <string>Reminders</string>
        </property>
       </widget>
      </item>
@@ -370,30 +370,23 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_16">
-       <property name="text">
-        <string>Diğer</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="pushButton_14">
        <property name="text">
-        <string>Araçlar</string>
+        <string>Tools</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_15">
        <property name="text">
-        <string>Yardım</string>
+        <string>Help</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_kapat_2">
        <property name="text">
-        <string>Kapat</string>
+        <string>Exit</string>
        </property>
        <property name="icon">
         <iconset theme="edit-delete"/>
