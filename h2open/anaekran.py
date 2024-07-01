@@ -144,12 +144,6 @@ class MainWindow(QWidget):
 
 
 
-
-
-with open('MaterialDark.qss', 'r') as f:
-    stylesheet = f.read()
-
-
 if __name__ == "__main__":
     #qdarktheme.enable_hi_dpi()
     app = QApplication(sys.argv)

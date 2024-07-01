@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'form.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.7.1
+## Created by: Qt User Interface Compiler version 6.7.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -308,7 +308,7 @@ class Ui_AnaEkran(object):
     # setupUi
 
     def retranslateUi(self, AnaEkran):
-        AnaEkran.setWindowTitle(QCoreApplication.translate("AnaEkran", u"Orhan Yaz\u0131l\u0131m A.\u015e. T\u00fcp Su Takip Program\u0131 \u00a92024", None))
+        AnaEkran.setWindowTitle(QCoreApplication.translate("AnaEkran", u"H2Open \u00a92024", None))
         self.pushButton_68.setText(QCoreApplication.translate("AnaEkran", u"Sat\u0131\u015f", None))
         self.pushButton_69.setText(QCoreApplication.translate("AnaEkran", u"Araca Bildir", None))
         self.pushButton_70.setText(QCoreApplication.translate("AnaEkran", u"Verildi", None))
