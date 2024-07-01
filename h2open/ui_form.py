@@ -28,6 +28,8 @@ class Ui_AnaEkran(object):
         AnaEkran.resize(1280, 720)
         AnaEkran.setMinimumSize(QSize(1280, 720))
         AnaEkran.setMaximumSize(QSize(1600000, 1600000))
+        AnaEkran.setWindowOpacity(1.000000000000000)
+        AnaEkran.setAutoFillBackground(False)
         AnaEkran.setStyleSheet(u"")
         self.gridLayout = QGridLayout(AnaEkran)
         self.gridLayout.setObjectName(u"gridLayout")
