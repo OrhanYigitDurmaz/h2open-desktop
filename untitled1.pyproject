@@ -1,0 +1,10 @@
+{
+    "files": [
+        "widget.py",
+        "form.ui",
+        "caller_id_popup.ui",
+        "destek_iste.ui",
+        "dark_palette.py",
+        "MaterialDark.qss"
+    ]
+}
