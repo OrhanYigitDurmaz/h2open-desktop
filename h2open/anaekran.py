@@ -1,7 +1,8 @@
 # This Python file uses the following encoding: utf-8
 import sys
-
-from PySide6.QtWidgets import QApplication, QWidget, QHeaderView, QTableWidget
+import os
+#os.environ["QT_DEBUG_PLUGINS"] = "1" #DEBUG LIBRARIES
+from PySide6.QtWidgets import QApplication, QWidget, QHeaderView, QTableWidget, QMessageBox
 from PySide6.QtCore import Signal, Qt, QAbstractItemModel, QModelIndex
 from PySide6.QtSql import QSqlDatabase as database
 from PySide6.QtSql import QSqlQuery
@@ -69,8 +70,9 @@ class MainWindow(QWidget):
         #to make it currentText, you need to make it editable
         #self.ui.comboBox_urun.setCurrentIndex(0)
         #self.ui.tableWidget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
-        horizontal_header = NonDraggableHeader(Qt.Horizontal)
-        vertical_header = NonResizableVerticalHeader(Qt.Vertical)
+
+        #horizontal_header = NonDraggableHeader(Qt.Horizontal)
+        #vertical_header = NonResizableVerticalHeader(Qt.Vertical)
         #self.ui.tableWidget.setHorizontalHeader(horizontal_header)
         #self.ui.tableWidget.setVerticalHeader(vertical_header)
 
@@ -84,39 +86,24 @@ class MainWindow(QWidget):
         #self.ui.pushButton_aramaVeSatis.clicked.connect(self.on_arama_ve_satis_clicked)
         #self.ui.pushButton_aboneler.clicked.connect(self.on_aboneler_clicked)
 
-        db = database.addDatabase("QSQLITE")
-        db.setDatabaseName("tupsu.db")
+        db = database.addDatabase('QODBC')
+        db.setDatabaseName("h2open_mari")
 
         if not db.open():
-          print("Error opening database:", db.lastError().text())
+          error_message = db.lastError().text()
+          QMessageBox.critical(None, "Database Connection", f"Database Connection Failed!\nError: {error_message}")
           exit()
 
         print(db)
 
-        table_name = "urunler"
+        table_name = "sales"
 
-        query = QSqlQuery(db)
-        query.exec_(f"SELECT * FROM {table_name}")  # Using f-string for clarity
-
-        print("queryyy")
-        print(query.isValid)
-
-
-        if not query.isValid():
-          print("Error executing query:", query.lastError().text())
-        else:
-          # Process each row (assuming query is valid)
-          while query.next():
-            try:
-              # Access column values using their names or index (carefully!)
-              id = query.value("id").toInt()  # Assuming 'id' column exists
-              username = query.value("urun_adi").toString()
-              # ... access other columns if present
-              print(f"ID: {id}, Username: {username}")  # Example output formatting
-            except TypeError as e:
-              print(f"Error accessing data: {e}")  # Handle potential type mismatches
-
-
+        query = QSqlQuery()
+        if not query.exec("SELECT * FROM sales"):
+            print("Query execution error: ", query.lastError().text())
+            return
+        while query.next():
+            print(query.value(4))
 
     def on_page_switch_clicked(self, index):
         self.ui.stackedWidget.setCurrentIndex(index)
