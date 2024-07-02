@@ -1,6 +1,7 @@
 {
     "files": [
         "anaekran.py",
+        "db_connection.py",
         "form.ui"
     ]
 }

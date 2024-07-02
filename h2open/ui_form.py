@@ -158,6 +158,7 @@ class Ui_AnaEkran(object):
 
         self.dateEdit = QDateEdit(self.tab)
         self.dateEdit.setObjectName(u"dateEdit")
+        self.dateEdit.setCalendarPopup(True)
 
         self.gridLayout_3.addWidget(self.dateEdit, 1, 0, 1, 1)
 

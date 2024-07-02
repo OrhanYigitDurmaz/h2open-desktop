@@ -9,6 +9,7 @@ from PySide6.QtSql import QSqlQuery
 from PySide6.QtGui import QPalette, QColor
 import dark_palette
 from datetime import date
+from db_connection import connect_database
 darktheme_fix = QPalette()
 
 # Important:
@@ -65,8 +66,8 @@ class MainWindow(QWidget):
         # normally, get the array of the avaliable uruns, and add them via "addItems"
         #AVOID!!! "Tümü" should be the first element of the array ALWAYS
         #TODO: append to an array only containing "Tümü"
-        urun_items = ["Tümü", "Option B", "Option C"]
-        #self.ui.comboBox_urun.addItems(urun_items)
+        urun_items = ["All", "Option B", "Option C", "Option D", "Option E", "Option F", "Option G", "Option H", "Option I", "Option J", "Option K", "Option L", "Option M", "Option N", "Option O", "Option P", "Option Q"]
+        self.ui.comboBox_2.addItems(urun_items)
         #to make it currentText, you need to make it editable
         #self.ui.comboBox_urun.setCurrentIndex(0)
         #self.ui.tableWidget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
@@ -86,15 +87,7 @@ class MainWindow(QWidget):
         #self.ui.pushButton_aramaVeSatis.clicked.connect(self.on_arama_ve_satis_clicked)
         #self.ui.pushButton_aboneler.clicked.connect(self.on_aboneler_clicked)
 
-        db = database.addDatabase('QODBC')
-        db.setDatabaseName("h2open_mari")
-
-        if not db.open():
-          error_message = db.lastError().text()
-          QMessageBox.critical(None, "Database Connection", f"Database Connection Failed!\nError: {error_message}")
-          exit()
-
-        print(db)
+        connect_database()
 
         table_name = "sales"
 
@@ -113,14 +106,6 @@ class MainWindow(QWidget):
 
     def on_aboneler_clicked(self):
         self.page_switch_clicked.emit(0)
-
-    def limitColumnResize(self, logicalIndex, oldSize, newSize):
-        # Get the width of the screen
-        screen_width = self.table_widget.viewport().width()
-
-        # Check if the resized column exceeds the screen width
-        if self.table_widget.horizontalHeader().length() > screen_width:
-            self.table_widget.horizontalHeader().resizeSection(logicalIndex, oldSize)
 
     def highlight_row(self, row):
         for col in range(self.ui.tableWidget.columnCount()):
