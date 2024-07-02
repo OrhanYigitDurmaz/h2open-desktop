@@ -1,0 +1,9 @@
+CREATE TABLE sales (
+    sale_id SERIAL PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    quantity INTEGER NOT NULL,
+    unit_price NUMERIC(10, 2) NOT NULL,
+    sale_date DATE NOT NULL,
+    customer_id INTEGER REFERENCES customers(customer_id),
+    salesperson_id INTEGER REFERENCES salespersons(salesperson_id)
+);
