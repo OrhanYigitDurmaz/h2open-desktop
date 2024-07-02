@@ -3,7 +3,7 @@ import sys
 import os
 #os.environ["QT_DEBUG_PLUGINS"] = "1" #DEBUG LIBRARIES
 from PySide6.QtWidgets import QApplication, QWidget, QHeaderView, QTableWidget, QMessageBox
-from PySide6.QtCore import Signal, Qt, QAbstractItemModel, QModelIndex
+from PySide6.QtCore import Signal, Qt, QAbstractItemModel, QModelIndex, QDate
 from PySide6.QtSql import QSqlDatabase as database
 from PySide6.QtSql import QSqlQuery
 from PySide6.QtGui import QPalette, QColor
@@ -66,7 +66,7 @@ class MainWindow(QWidget):
         # normally, get the array of the avaliable uruns, and add them via "addItems"
         #AVOID!!! "Tümü" should be the first element of the array ALWAYS
         #TODO: append to an array only containing "Tümü"
-        urun_items = ["All", "Option B", "Option C", "Option D", "Option E", "Option F", "Option G", "Option H", "Option I", "Option J", "Option K", "Option L", "Option M", "Option N", "Option O", "Option P", "Option Q"]
+        default_array = ["All"]
         self.ui.comboBox_2.addItems(urun_items)
         #to make it currentText, you need to make it editable
         #self.ui.comboBox_urun.setCurrentIndex(0)
@@ -78,9 +78,8 @@ class MainWindow(QWidget):
         #self.ui.tableWidget.setVerticalHeader(vertical_header)
 
 
-
         #set date
-        #self.ui.dateEdit_3.setDate(date.today())
+        self.ui.dateEdit.setDate(date.today())
 
 
         #self.page_switch_clicked.connect(self.on_page_switch_clicked)

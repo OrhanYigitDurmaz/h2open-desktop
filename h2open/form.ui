@@ -104,13 +104,6 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_75">
-               <property name="text">
-                <string>Sale Re</string>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QPushButton" name="pushButton_76">
                <property name="text">
                 <string>Sale Report</string>
@@ -209,6 +202,12 @@
              </item>
              <item row="1" column="0">
               <widget class="QDateEdit" name="dateEdit">
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+               <property name="displayFormat">
+                <string>dd/MM/yy</string>
+               </property>
                <property name="calendarPopup">
                 <bool>true</bool>
                </property>
@@ -347,7 +346,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Search &amp;&amp; Sales</string>
+        <string>Sales</string>
        </property>
       </widget>
      </item>

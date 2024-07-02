@@ -87,11 +87,6 @@ class Ui_AnaEkran(object):
 
         self.horizontalLayout_12.addWidget(self.pushButton_74)
 
-        self.pushButton_75 = QPushButton(self.tab)
-        self.pushButton_75.setObjectName(u"pushButton_75")
-
-        self.horizontalLayout_12.addWidget(self.pushButton_75)
-
         self.pushButton_76 = QPushButton(self.tab)
         self.pushButton_76.setObjectName(u"pushButton_76")
 
@@ -158,6 +153,7 @@ class Ui_AnaEkran(object):
 
         self.dateEdit = QDateEdit(self.tab)
         self.dateEdit.setObjectName(u"dateEdit")
+        self.dateEdit.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
         self.dateEdit.setCalendarPopup(True)
 
         self.gridLayout_3.addWidget(self.dateEdit, 1, 0, 1, 1)
@@ -314,7 +310,6 @@ class Ui_AnaEkran(object):
         self.pushButton_72.setText(QCoreApplication.translate("AnaEkran", u"Delete", None))
         self.pushButton_73.setText(QCoreApplication.translate("AnaEkran", u"Deposit", None))
         self.pushButton_74.setText(QCoreApplication.translate("AnaEkran", u"Send SMS", None))
-        self.pushButton_75.setText(QCoreApplication.translate("AnaEkran", u"Sale Re", None))
         self.pushButton_76.setText(QCoreApplication.translate("AnaEkran", u"Sale Report", None))
         self.pushButton_77.setText(QCoreApplication.translate("AnaEkran", u"Print", None))
         self.label_2.setText(QCoreApplication.translate("AnaEkran", u"Date:", None))
@@ -326,11 +321,12 @@ class Ui_AnaEkran(object):
         self.label_8.setText(QCoreApplication.translate("AnaEkran", u"Dispenser:", None))
         self.label_9.setText(QCoreApplication.translate("AnaEkran", u"Receipt No:", None))
         self.label.setText("")
+        self.dateEdit.setDisplayFormat(QCoreApplication.translate("AnaEkran", u"dd/MM/yy", None))
         self.pushButton.setText(QCoreApplication.translate("AnaEkran", u"Reset", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("AnaEkran", u"Tab 1", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("AnaEkran", u"Tab 2", None))
         self.pushButton_aboneler_2.setText(QCoreApplication.translate("AnaEkran", u"Customers", None))
-        self.pushButton_aramaVeSatis_2.setText(QCoreApplication.translate("AnaEkran", u"Search && Sales", None))
+        self.pushButton_aramaVeSatis_2.setText(QCoreApplication.translate("AnaEkran", u"Sales", None))
         self.pushButton_9.setText(QCoreApplication.translate("AnaEkran", u"Products && Stock", None))
         self.pushButton_13.setText(QCoreApplication.translate("AnaEkran", u"Register", None))
         self.pushButton_11.setText(QCoreApplication.translate("AnaEkran", u"Reminders", None))

@@ -2,6 +2,7 @@
     "files": [
         "anaekran.py",
         "db_connection.py",
+        "dialog.ui",
         "form.ui"
     ]
 }
