@@ -67,7 +67,8 @@ class MainWindow(QWidget):
         #AVOID!!! "Tümü" should be the first element of the array ALWAYS
         #TODO: append to an array only containing "Tümü"
         default_array = ["All"]
-        self.ui.comboBox_2.addItems(urun_items)
+        self.ui.comboBox_2.addItems(default_array)
+        
         #to make it currentText, you need to make it editable
         #self.ui.comboBox_urun.setCurrentIndex(0)
         #self.ui.tableWidget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)

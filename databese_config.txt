@@ -41,10 +41,12 @@ CREATE TABLE products (
     product_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     product_name VARCHAR(50),
     stock INTEGER NOT NULL,
-    unit_price NUMERIC (10,2) NOT NULL,
+    sell_price NUMERIC (10,2) NOT NULL
+    buy_price NUMERIC (10,2) NOT NULL,
     product_unit INTEGER REFERENCES product_units(product_unit_id),
     sell_vat INTEGER NOT NULL CHECK (sell_vat <= 100),
     buy_vat INTEGER NOT NULL CHECK (buy_vat <= 100),
+    is_returnable BOOLEAN NOT NULL DEFAULT FALSE,
 );
 
 //DONE

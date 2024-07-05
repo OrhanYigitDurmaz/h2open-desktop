@@ -298,6 +298,9 @@ class Ui_AnaEkran(object):
 
         self.retranslateUi(AnaEkran)
 
+        self.tabWidget.setCurrentIndex(0)
+
+
         QMetaObject.connectSlotsByName(AnaEkran)
     # setupUi
 
@@ -323,8 +326,8 @@ class Ui_AnaEkran(object):
         self.label.setText("")
         self.dateEdit.setDisplayFormat(QCoreApplication.translate("AnaEkran", u"dd/MM/yy", None))
         self.pushButton.setText(QCoreApplication.translate("AnaEkran", u"Reset", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("AnaEkran", u"Tab 1", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("AnaEkran", u"Tab 2", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("AnaEkran", u"Today's Sales", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("AnaEkran", u"Callers", None))
         self.pushButton_aboneler_2.setText(QCoreApplication.translate("AnaEkran", u"Customers", None))
         self.pushButton_aramaVeSatis_2.setText(QCoreApplication.translate("AnaEkran", u"Sales", None))
         self.pushButton_9.setText(QCoreApplication.translate("AnaEkran", u"Products && Stock", None))

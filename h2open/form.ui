@@ -47,9 +47,12 @@
            <verstretch>8</verstretch>
           </sizepolicy>
          </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
-           <string>Tab 1</string>
+           <string>Today's Sales</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="0">
@@ -306,7 +309,7 @@
          </widget>
          <widget class="QWidget" name="tab_2">
           <attribute name="title">
-           <string>Tab 2</string>
+           <string>Callers</string>
           </attribute>
          </widget>
         </widget>
